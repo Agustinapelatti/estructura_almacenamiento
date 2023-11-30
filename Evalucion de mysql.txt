@@ -1,0 +1,20 @@
+CREATE DATABASE IF NOT EXISTS estudiantesdeintercambio;
+
+USE estudiantesdeintercambio;
+
+CREATE TABLE estudiantes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    dni INT,
+    fechadeingreso DATE,
+    estudiantesid text,
+	foreign key (estudiantesid) REFERENCES pais(id)
+);
+
+CREATE TABLE pais (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+     nombrepais TEXT,
+    nombredelcolegio VARCHAR(255),
+    codigopostaldelpais INT
+    );
